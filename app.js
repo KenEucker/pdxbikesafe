@@ -5,11 +5,6 @@ var express = require('express'),
 
 console.log(path.join(__dirname, '/templates/pdxbikesafe/'));
 app.use(express.static(path.join(__dirname, '/templates/pdxbikesafe/')));
-app.use(express.static(path.join(__dirname, '/quasi.io/')));
-
-app.get('/', function(req, res){
-    res.sendFile(path.join(__dirname + '/templates/ken/index.html'));
-});
 
 app.use("/assets", function(req, res) {
     var file = req.url = (req.url.indexOf('?') != -1) ? req.url.substring(0, req.url.indexOf('?')) : req.url;
