@@ -247,6 +247,8 @@ header .header-content {
     padding: 100px 15px;
     text-align: center;
     z-index: 2;
+    background: rgba(0, 0, 0, .4);
+    padding: 4% 0px;
 }
 
 header .header-content .inner h1 {
@@ -521,4 +523,10 @@ img::selection {
 img::-moz-selection {
     color: #fff;
     background: 0 0;
+}
+
+.new-star {
+    float: right;
+    margin-top: -5%;
+    color: yellow;
 }
