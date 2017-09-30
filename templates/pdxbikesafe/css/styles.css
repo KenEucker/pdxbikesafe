@@ -536,10 +536,21 @@ img::-moz-selection {
     width:  auto;
 }
 
-.ride-num h1, h2 {
+.inlined * {
     display: inline-flex;
 }
 
-.inlined * {
+.ride-num {
+    margin-top: -5%;
+    margin-bottom: -9%;
+}
+
+.ride-num > h1 {
+    font-size: 80px;
+    display: inline-flex;
+}
+
+.ride-num #ride-count {
+    font-size: 80px;
     display: inline-flex;
 }
