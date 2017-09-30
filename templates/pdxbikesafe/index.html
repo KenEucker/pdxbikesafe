@@ -21,7 +21,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#first"><i class="ion-ios-analytics-outline"></i> Landing Zero</a>
+                <a class="navbar-brand page-scroll" href="#first"><span class="bike-icon"></span> TNR PDX</a>
             </div>
             <div class="navbar-collapse collapse" id="bs-navbar">
                 <ul class="nav navbar-nav">
@@ -38,7 +38,7 @@
                         <a class="page-scroll" href="#community-guidelines">Community Guidelines</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#community-guidelines">Plan A Ride</a>
+                        <a class="page-scroll" href="#plan-ride">Plan A Ride</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">Get In Touch</a>
@@ -58,8 +58,8 @@
                 <h3>Welcome to the TNR</h3>
                 <h1 class="cursive">Ride With Us</h1>
                 <hr>
-                <a href="#next-ride" id="next-ride" class="btn btn-primary btn-xl">Upcoming ride info</a> &nbsp;
-                <a href="#hello" class="btn btn-primary btn-xl page-scroll"><i class="icon-sm ion-ios-information wow fadeIn new-star" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;"></i>New Community Guidelines!</a>
+                <a href="#next-ride" class="btn btn-primary btn-xl page-scroll">Upcoming ride info</a> &nbsp;
+                <a href="#community-guidelines" class="btn btn-primary btn-xl page-scroll"><i class="icon-sm ion-ios-information wow fadeIn new-star" data-wow-delay=".3s" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeIn;"></i>New Community Guidelines!</a>
             </div>
         </div>
     </header>
@@ -98,7 +98,9 @@
                 <div class="col-lg-4 col-md-4 text-center">
                     <div class="feature">
                         <i class="icon-lg ion-android-laptop wow fadeIn" data-wow-delay=".3s"></i>
-                        <h3>#130</h3>
+                        <div class="ride-num fadeIn">
+                            <h1>#</h1><h2 id="ride-count">130</h2>
+                        </div>
                         <p class="text-muted">Mike's Birthday/Farewell Ride</p>
                     </div>
                 </div>
@@ -112,8 +114,8 @@
                 <div class="col-lg-4 col-md-4 text-center">
                     <div class="feature">
                         <i class="icon-lg ion-ios-star-outline wow fadeIn" data-wow-delay=".3s"></i>
-                        <h3>Consistent</h3>
-                        <p class="text-muted">A mature, well-tested, stable codebase</p>
+                        <h3>Themed</h3>
+                        <p class="text-muted">It's a birthday ride, so, ya know, be celebratory.</p>
                     </div>
                 </div>
             </div>
@@ -122,9 +124,14 @@
     <section id="pictures" class="no-padding">
         <div class="container-fluid">
             <div class="row no-gutter">
+                <div class="col-lg-12 col-sm-12">
+                    <div style="text-align: center">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/lsXnynO_MSw?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
                 <div class="col-lg-4 col-sm-6">
-                    <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="assets/img/deer.jpg">
-                        <img src="assets/img/deer.jpg" class="img-responsive" alt="Image 1">
+                    <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="assets/img/TNR-116-42.jpg">
+                        <img src="assets/img/TNR-116-42.jpg" class="img-responsive" alt="Image 1">
                         <div class="gallery-box-caption">
                             <div class="gallery-box-content">
                                 <div>
@@ -135,33 +142,8 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                    <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="assets/img/beach.jpg">
-                        <img src="assets/img/beach.jpg" class="img-responsive" alt="Image 2">
-                        <div class="gallery-box-caption">
-                            <div class="gallery-box-content">
-                                <div>
-                                    <i class="icon-lg ion-ios-search"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-				<div class="clearfix hidden-lg"> </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="assets/img/lake.jpg">
-                        <img src="assets/img/lake.jpg" class="img-responsive" alt="Image 3">
-                        <div class="gallery-box-caption">
-                            <div class="gallery-box-content">
-                                <div>
-                                    <i class="icon-lg ion-ios-search"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="assets/img/bike.jpg">
-                        <img src="assets/img/bike.jpg" class="img-responsive" alt="Image 4">
+                    <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="assets/img/TNR-116-126.jpg">
+                        <img src="assets/img/TNR-116-126.jpg" class="img-responsive" alt="Image 2">
                         <div class="gallery-box-caption">
                             <div class="gallery-box-content">
                                 <div>
@@ -173,8 +155,8 @@
                 </div>
 				<div class="clearfix hidden-lg"> </div>
                 <div class="col-lg-4 col-sm-6">
-                    <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="assets/img/city.jpg">
-                        <img src="assets/img/city.jpg" class="img-responsive" alt="Image 5">
+                    <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="assets/img/TNR-116-212.jpg">
+                        <img src="assets/img/TNR-116-212.jpg" class="img-responsive" alt="Image 3">
                         <div class="gallery-box-caption">
                             <div class="gallery-box-content">
                                 <div>
@@ -185,8 +167,33 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-sm-6">
-                    <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="assets/img/colors.jpg">
-                        <img src="assets/img/colors.jpg" class="img-responsive" alt="Image 6">
+                    <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="assets/img/TNR-119-445.jpg">
+                        <img src="assets/img/TNR-119-445.jpg" class="img-responsive" alt="Image 4">
+                        <div class="gallery-box-caption">
+                            <div class="gallery-box-content">
+                                <div>
+                                    <i class="icon-lg ion-ios-search"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+				<div class="clearfix hidden-lg"> </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="assets/img/TNR-123-460.jpg">
+                        <img src="assets/img/TNR-123-460.jpg" class="img-responsive" alt="Image 5">
+                        <div class="gallery-box-caption">
+                            <div class="gallery-box-content">
+                                <div>
+                                    <i class="icon-lg ion-ios-search"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#galleryModal" class="gallery-box" data-toggle="modal" data-src="assets/img/TNR-117-168.jpg">
+                        <img src="assets/img/TNR-117-168.jpg" class="img-responsive" alt="Image 6">
                         <div class="gallery-box-caption">
                             <div class="gallery-box-content">
                                 <div>
@@ -202,7 +209,7 @@
     <section class="container-fluid" id="community-guidelines">
         <div class="row">
             <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
-                <h2 class="text-center text-primary">Features</h2>
+                <h2 class="text-center text-primary">Community Guidelines</h2>
                 <hr>
                 <div class="media wow fadeInRight">
                     <h3>Simple</h3>
@@ -256,7 +263,7 @@
             </div>
         </div>
     </section>
-    <aside class="bg-dark">
+    <aside class="bg-dark" id="plan-ride">
         <div class="container text-center">
             <div class="call-to-action">
                 <h2 class="text-primary">Plan A Ride</h2>

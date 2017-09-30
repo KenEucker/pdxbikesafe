@@ -319,7 +319,7 @@ footer {
     
     section {
         min-height: 600px;
-        padding: 100px 0;
+        padding: 10px 0;
     }
 
 }
@@ -529,4 +529,14 @@ img::-moz-selection {
     float: right;
     margin-top: -5%;
     color: yellow;
+}
+
+.bike-icon {
+    background-image: url('/assets/img/bicon.png');
+    height: 10px;
+    width:  auto;
+}
+
+.ride-num h1, h2 {
+    display: inline-flex;
 }
