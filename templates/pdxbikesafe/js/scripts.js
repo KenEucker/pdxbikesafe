@@ -44,6 +44,8 @@
 
         // WOW
         new WOW().init();
+        // Image lazyload
+        var myLazyLoad = new LazyLoad();
 
         // Ride number count up
         var counter = $('#ride-count');
