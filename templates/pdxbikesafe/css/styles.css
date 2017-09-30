@@ -554,3 +554,19 @@ img::-moz-selection {
     font-size: 80px;
     display: inline-flex;
 }
+
+#event-link {
+    text-decoration: none;
+}
+
+#event-link img {
+    height: 150px;
+    margin: 0 auto;
+    border-radius: 10%;
+}
+
+#event-link i {
+    position: absolute;
+    top: 59%;
+    color: rgb(206, 42, 14);
+}
