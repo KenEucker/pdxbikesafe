@@ -100,7 +100,8 @@
         });
 
         $('#galleryModal').on('show.bs.modal', function (e) {
-        $('#galleryImage').attr("src",$(e.relatedTarget).data("src"));
+            $('#galleryImage').attr("src",$(e.relatedTarget).data("src"));
+            $('#galleryModal .credit').text($(e.relatedTarget).data("credit"));
         });
 
         $(window).scroll(function () {
