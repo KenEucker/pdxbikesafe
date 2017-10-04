@@ -2,8 +2,7 @@
     "use strict";
 
     var rideCountupStarted = false,
-        allIframesLoaded = false,
-        originalCount = 0;
+        allIframesLoaded = false;
 
     var isMobileBrowser = function() {
         var check = false;
@@ -49,7 +48,6 @@
 
         // Ride number count up
         var counter = $('#ride-count');
-        originalCount = parseInt(counter.text());
         counter.text("0");
     };
     
@@ -69,20 +67,37 @@
         }    
     };
 
-    var startRideCountup = function () {
-        console.log('starting ride countup');
-        var counter = $('#ride-count');
-        var count = parseInt(counter.text());
+    var countUpEasing = function(t) {
+        return t*(2-t);
+    }
 
-        if(originalCount <= count) {
+    var startRideCountup = function () {
+        var counter = $('#ride-count');
+        var originalCount = parseInt(counter.text());
+        var tnr_genesis = new Date(2015, 3, 9, 19, 30);
+        // We have never missed a week since the start.
+        var offset = 0;
+        var ride_number = Math.ceil(((new Date() - tnr_genesis) / 86400000)/7) + offset;
+
+        if(originalCount >= ride_number) {
             return;
+        } else if (originalCount == NaN || originalCount == undefined) {
+            originalCount = 0;
         }
-        
+
         counter.removeClass();
-        counter.text(count + 1);
+        counter.text(originalCount + 1);
         counter.addClass('fadeInUp');
 
-        setTimeout(startRideCountup, 1);
+        var frameDelay = 5
+        if (ride_number - originalCount <= 2) {
+            frameDelay = 250;
+        } else if (ride_number - originalCount < 15) {
+            var percentage = Math.abs(ride_number - originalCount - 15) / 15;
+            frameDelay = countUpEasing(percentage) * 100;
+        }
+
+        setTimeout(startRideCountup, frameDelay);
     };
 
     var initScroll = function () {
