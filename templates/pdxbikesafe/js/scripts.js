@@ -58,6 +58,25 @@
         var tnr_date = new Date((tnr_genesis * 1) + (ride_number * 604800000))
         $('#ride-date').text(humanizeDateString(tnr_date))
 
+
+        // Better full-width Google maps UX
+        var hideInstructions = false;
+        $('#gmaps-container').click(function(){
+            $(this).find('iframe').addClass('clicked');
+            $(this).removeClass('instructions');
+            hideInstructions = true;
+        }).mouseleave(function(){
+            $(this).find('iframe').removeClass('clicked');
+        }).mouseover(function(){
+            if (!hideInstructions) {
+                $(this).addClass('instructions');
+                var container = this;
+                setTimeout(function() {
+                    hideInstructions = true;
+                    $(container).removeClass('instructions');
+                }, 5000);
+            }
+        });
     };
     
     var humanizeDateString = function(date) {
