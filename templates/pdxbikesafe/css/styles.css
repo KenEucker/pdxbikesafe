@@ -598,3 +598,11 @@ img::-moz-selection {
     top: 59%;
     color: rgb(206, 42, 14);
 }
+
+#first a.btn {
+    white-space: normal;
+}
+
+#hello a.btn {
+    white-space: normal;
+}
