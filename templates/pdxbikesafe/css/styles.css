@@ -56,6 +56,34 @@ p {
     margin-bottom: 20px;
 }
 
+iframe {
+    border: 0px;
+}
+
+#gmaps-container iframe {
+    pointer-events: none;
+}
+
+#gmaps-container iframe.clicked {
+    pointer-events: auto;
+}
+
+#gmaps-container {
+    position: relative;
+    margin-bottom: 0px;
+}
+
+#gmaps-container.instructions::before {
+    content: "Click to activate";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, .5);
+}
+
 .wide-space {
     letter-spacing: 1.6px;
 }
