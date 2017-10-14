@@ -269,6 +269,12 @@ header {
     -o-background-size: cover;
 }
 
+@media (max-width: 480px) {
+    header {
+        background-image: url('/assets/img/TNR-121-406-thumb.jpg');
+    }
+ } 
+
 header .header-content {
     position: relative;
     width: 100%;

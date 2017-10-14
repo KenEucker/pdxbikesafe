@@ -71,7 +71,7 @@
             if (!hideInstructions) {
                 $(this).addClass('instructions');
                 var container = this;
-                setTimeout(function() {
+                requestTimeout(function() {
                     hideInstructions = true;
                     $(container).removeClass('instructions');
                 }, 5000);
@@ -134,8 +134,38 @@
             frameDelay = countUpEasing(percentage) * 100;
         }
 
-        setTimeout(startRideCountup, frameDelay);
+        requestTimeout(startRideCountup, frameDelay);
     };
+
+    var getLastThursdayDate = function(d) {
+        d = d ? new Date(d) : new Date();
+        var day = d.getDay(),
+            diff = d.getDate() - day + (day == 0 ? -3:4); // adjust when day is sunday
+        return new Date(d.setDate(diff));
+    }
+
+    var resetRideInfoToDefault = function() {
+        var rideInfoDate = $('#ride-info-last-updated');
+        var lastThursday = getLastThursdayDate(); 
+        var lastUpdatedDate = new Date(rideInfoDate.text());
+      
+        if (Date.parse(lastThursday ) >Date.parse(lastUpdatedDate)) {
+            var feature1 = $('#ride-feature-1'),
+            feature2 = $('#ride-feature-2'),
+            feature3 = $('#ride-feature-3');
+
+            feature1.find('p').text('Thursday Night Ride');
+
+            feature2.find('i').attr('class', 'icon-lg ion-android-bicycle wow fadeInUp');
+            feature2.find('h3').text('You know what to expect');
+            feature2.find('p').text('There will be at least one bathroom stop and one store stop');
+
+            feature3.find('i').attr('class', 'icon-lg ion-android-contacts wow fadeInUp');
+            feature3.find('h3').text('Theme TBD');
+            feature3.find('p').text('Let\'s have fun biking around town with our friends!');
+
+        }
+    }
 
     var initScroll = function () {
         $('a.page-scroll').bind('click', function(event) {
@@ -181,5 +211,6 @@
     initIframes();
     initEnhancements();
     initScroll();
+    resetRideInfoToDefault();
 
 })(jQuery);
