@@ -140,7 +140,7 @@
     var getLastThursdayDate = function(d) {
         d = d ? new Date(d) : new Date();
         var day = d.getDay(),
-            diff = d.getDate() - day + (day == 0 ? -2:5); // adjust when day is sunday
+            diff = d.getDate() - day + (day == 0 ? -4:3); // adjust when day is sunday
         return new Date(d.setDate(diff));
     }
 
