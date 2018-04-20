@@ -3,7 +3,7 @@ var express = require('express'),
     app = express(),
     favicon = require('serve-favicon'),
     port = 8080,
-    template = path.join(__dirname, '/templates/pdxbikesafe/');
+    template = path.join(__dirname, '/templates/tnrisbad/');
 
 console.log(template);
 app.use(express.static(template));
